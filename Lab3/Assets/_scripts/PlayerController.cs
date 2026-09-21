@@ -6,7 +6,8 @@ public class PlayerController : MonoBehaviour
     private float moveInput;
     public float moveSpeed;
     public float cameraBounds = 8.5f;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    //collect input
     void OnMove(InputValue value)
     {
         Vector2 rawInput = value.Get<Vector2>();
@@ -26,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    // handle moving left and right o the screen clamped at screen edges
     void Update()
     {
         float xMove = transform.position.x + moveInput * moveSpeed * Time.deltaTime;
