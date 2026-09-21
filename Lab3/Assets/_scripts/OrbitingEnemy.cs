@@ -11,7 +11,7 @@ public class OrbitingEnemy : MonoBehaviour
     [SerializeField] private float baseSpeedMultiplier = 5f;
     private float degreesPerSecond = 45f;
 
-    private float currentAngle;   // in degrees
+    private float currentAngle;
 
     private void Update()
     {
